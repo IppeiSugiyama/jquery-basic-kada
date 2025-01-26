@@ -8,14 +8,32 @@
 
 // $(window).on(イベント, () => {});
 
-$(function() {
+// $(function() {
 
-  // HTMLが読み込まれたとき
-  $(document).ready(function(){
-    console.log('loadイベントが発生しました');
-   });
+//   // HTMLが読み込まれたとき
+//   $(document).ready(function(){
+//     console.log('loadイベントが発生しました');
+//    });
    
-   $(window).on('scroll',function(){
+//    $(window).on('scroll',function(){
+//     console.log('scrollイベントが発生しました');
+//    });
+// });
+
+
+$(function() {
+  // HTMLが読み込まれたときに
+  $(document).ready(function() {
+    console.log('loadイベントが発生しました');
+  });
+
+  // ページ全体が読み込まれたときに
+  $(window).on('load', function() {
+    console.log('loadイベントが発生しました');
+  });
+
+  // 画面をスクロールしたときに
+  $(window).on('scroll', function() {
     console.log('scrollイベントが発生しました');
-   });
+  });
 });
